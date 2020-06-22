@@ -26,6 +26,7 @@ public class MainScript : MonoBehaviour
 
     public bool Adds;
 
+    public RectTransform Sizer;
 
     public TextMeshProUGUI ScoreText;
     public int Score;
@@ -37,6 +38,12 @@ public class MainScript : MonoBehaviour
 
     public void Start()
     {
+        
+
+        //float siez = Vector2.Distance(new Vector2(LeftWall.position.x, 0), new Vector2(RightWall.position.x, 0)) / 10;
+        BallPrefab.GetComponent<RectTransform>().sizeDelta = new Vector2(Sizer.rect.size.x / 10, Sizer.rect.size.x / 10);
+
+
         Score = PlayerPrefs.GetInt("Score");
         UpdateTextScore();
 

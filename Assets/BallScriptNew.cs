@@ -1,15 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BallScriptNew : MonoBehaviour
 {
     public int ID;
-    public SpriteRenderer spriteRenderer;
+    public Image spriteRenderer;
 
     public List<BallScriptNew> BallsContant = new List<BallScriptNew>();
 
     public MainScript main;
+
+    public RectTransform _rect;
+    public CircleCollider2D _collider;
+
+    void Start ()
+    {
+        _collider.radius = _rect.rect.size.x / 2;
+    }
 
     void OnMouseDown()
     {
