@@ -41,7 +41,7 @@ public class MainScript : MonoBehaviour
         
 
         //float siez = Vector2.Distance(new Vector2(LeftWall.position.x, 0), new Vector2(RightWall.position.x, 0)) / 10;
-        BallPrefab.GetComponent<RectTransform>().sizeDelta = new Vector2(Sizer.rect.size.x / 10, Sizer.rect.size.x / 10);
+        BallPrefab.GetComponent<RectTransform>().sizeDelta = new Vector2(Sizer.rect.size.x / 7, Sizer.rect.size.x / 7);
 
 
         Score = PlayerPrefs.GetInt("Score");
@@ -69,7 +69,7 @@ public class MainScript : MonoBehaviour
         ball.main = this;
         ball.gameObject.name = $"{BallCount}";
         ball.ID = randomind;
-        ball.spriteRenderer.color = Data.Colors[randomind];
+        ball.img.color = Data.Colors[randomind];
 
 
         Adds = true;
