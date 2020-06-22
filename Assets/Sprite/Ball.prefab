@@ -39,7 +39,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.010009766, y: 0.10998535}
-  m_SizeDelta: {x: 151.45372, y: 151.45372}
+  m_SizeDelta: {x: 136.92331, y: 136.92331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!58 &5547661209683989198
 CircleCollider2D:
@@ -96,7 +96,6 @@ MonoBehaviour:
   main: {fileID: 0}
   _rect: {fileID: 3130411658138171982}
   _collider: {fileID: 5547661209683989198}
-  FindStart: 0
 --- !u!222 &2771065990028837785
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -57,8 +57,9 @@ public class BallScriptNew : MonoBehaviour
                 Destroy(balls.gameObject);
             }
 
-            main.Score += BallsContant.Count;
-            main.UpdateTextScore();
+
+            main.ScorePlus += BallsContant.Count;
+            
             PlayerPrefs.SetInt("Score", main.Score);
 
             main.BallCount += BallsContant.Count;

@@ -31,21 +31,29 @@ public class MainScript : MonoBehaviour
     public TextMeshProUGUI ScoreText;
     public int Score;
 
+    public int ScorePlus;
+
+    public float time;
+    public float Timer = 0.1f;
+
+
     public void UpdateTextScore()
     {
+        time = 0;
+        Score++;
         ScoreText.text = Score.ToString();
     }
 
     public void Start()
     {
-        
+        Application.targetFrameRate = 60;
 
         //float siez = Vector2.Distance(new Vector2(LeftWall.position.x, 0), new Vector2(RightWall.position.x, 0)) / 10;
         BallPrefab.GetComponent<RectTransform>().sizeDelta = new Vector2(Sizer.rect.size.x / 7, Sizer.rect.size.x / 7);
 
 
         Score = PlayerPrefs.GetInt("Score");
-        UpdateTextScore();
+        ScoreText.text = Score.ToString();
 
         if(!Adds)
             AddBalls ();
@@ -53,6 +61,22 @@ public class MainScript : MonoBehaviour
 
     void Update()
     {
+        if(ScorePlus > 0)
+        {
+            time += Time.deltaTime;
+
+            if(time >= Timer)
+            {
+                ScorePlus--;
+                UpdateTextScore();
+            }
+        }
+        else
+        {
+            time = 0;
+        }
+
+
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             PlayerPrefs.SetInt("Score", Score);
