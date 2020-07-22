@@ -20,6 +20,12 @@ public class BallScriptNew : MonoBehaviour
         _collider.radius = _rect.rect.size.x / 2;
     }
 
+    public void SetColor (int id)
+    {
+        ID = id;
+        img.color = Data.Colors[id];
+    }
+
     public void ClickDown()
     {
         FindBalls(transform);

@@ -92,8 +92,8 @@ public class MainScript : MonoBehaviour
         BallScriptNew ball = Instantiate(BallPrefab, new Vector3(shift, 8, 0), Quaternion.identity, Balls).GetComponent<BallScriptNew>();
         ball.main = this;
         ball.gameObject.name = $"{BallCount}";
-        ball.ID = randomind;
-        ball.img.color = Data.Colors[randomind];
+        
+        ball.SetColor(randomind);
 
 
         Adds = true;
