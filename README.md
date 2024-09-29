@@ -1,10 +1,8 @@
 # PhysxMatch3
 
 ## Скриншоты
-![Скриншот 1](https://i.imgur.com/bWThNlJ.jpeg)
-![Скриншот 2](https://i.imgur.com/KitE1AH.jpeg)
-
-<img src="https://i.imgur.com/bWThNlJ.jpeg" alt="Скриншот 1" width="400"/>
+<img src="https://i.imgur.com/bWThNlJ.jpeg" alt="Скриншот 1" width="350"/>
+<img src="https://i.imgur.com/KitE1AH.jpeg" alt="Скриншот 2" width="350"/>
 
 **PhysxMatch3** — это увлекательная игра, в которой игроки должны лопать шарики, чтобы заработать очки. Игра основаная на физкие, что отличает её игр подобного жанра.
 
